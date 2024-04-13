@@ -15,7 +15,7 @@ async function updateData(word, score) {
     const data = await fetchData();
     data[word] = score;
     const response = await fetch('bdd.json', {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
