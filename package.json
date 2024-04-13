@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "author": "Silvère <silbes@proton.me>",
   "scripts": {
-    "test": "sol"
+    "test": "mocha *.test.js"
   }
 }
