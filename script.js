@@ -1,3 +1,5 @@
+const { MongoClient } = require("mongodb");
+
 // Fonction pour récupérer les données JSON localement
 async function fetchData() {
   const uri = 'mongodb+srv://silbes:hOKQ9G02i9bnGWm1@cluster0.bu4k3ge.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
