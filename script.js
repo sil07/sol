@@ -12,6 +12,13 @@ async function fetchData() {
 // Fonction pour mettre à jour les données JSON avec un nouveau mot et sa note
 async function updateData(word, score) {
   try {
+    fs.writeFileSync('bdd.json', JSON.stringify(data));
+    console.log('Données écrites avec succès dans le fichier JSON');
+  } catch (error) {
+  console.error('Erreur lors de l\'écriture des données dans le fichier JSON:', error);
+  }
+  /*
+  try {
     const data = await fetchData();
     data[word] = score;
     const response = await fetch('bdd.json', {
@@ -28,7 +35,7 @@ async function updateData(word, score) {
     }
   } catch (error) {
     console.error('Erreur lors de la mise à jour des données JSON:', error);
-  }
+  }*/
 }
 
 // Fonction pour calculer la note totale
