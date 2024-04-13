@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         #cache: 'npm'
+    - run: npm -v
     - run: npm config set package-lock true
     - run: npm i -g -D mocha
     - run: npm ci
