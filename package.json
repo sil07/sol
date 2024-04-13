@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Silvère <silbes@proton.me>",
   "scripts": {
-    "build": node "server.js";
+    "build": node "server.js",
     "test": "mocha *.test.js"
   }
 }
