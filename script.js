@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 // Fonction pour récupérer les données JSON localement
 async function fetchData() {
   try {
