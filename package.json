@@ -2,7 +2,7 @@
   "name": "sol-package",
   "version": "1.0.0",
   "author": "Silvère <silbes@proton.me>"
-}
-"scripts": {
-  "test": "test.js"
+  "scripts": {
+    "test": "test.js"
+  }
 }
