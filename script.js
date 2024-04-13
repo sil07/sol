@@ -1,13 +1,20 @@
-const fs = require('fs');
-
 // Fonction pour récupérer les données JSON localement
 async function fetchData() {
+  const uri = 'mongodb+srv://silbes:hOKQ9G02i9bnGWm1@cluster0.bu4k3ge.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+  const client = new MongoClient(uri);
+
   try {
-    const response = await fetch('bdd.json'); // Assurez-vous que le fichier JSON est dans le même répertoire que votre script
-    const data = await response.json();
+    await client.connect();
+    const database = client.db('nom_de_votre_base_de_données');
+    const collection = database.collection('nom_de_votre_collection');
+
+    // Récupérer les données
+    const data = await collection.find().toArray();
     return data;
   } catch (error) {
-    console.error('Erreur lors de la récupération des données JSON:', error);
+    console.error('Erreur lors de la récupération des données depuis MongoDB:', error);
+  } finally {
+    await client.close();
   }
 }
 
